@@ -1,0 +1,9 @@
+This README file contains information on the contents of the meta-bsp layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: https://github.com/superna9999/meta-meson.git
+  branch: kirkstone
