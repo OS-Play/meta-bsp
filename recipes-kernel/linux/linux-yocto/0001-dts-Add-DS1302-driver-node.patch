@@ -1,0 +1,33 @@
+From cdcd50d4c12b31626fdc848a88fccf75366f5c67 Mon Sep 17 00:00:00 2001
+From: Rany <rany@playos.xyz>
+Date: Tue, 8 Nov 2022 16:28:18 +0800
+Subject: [PATCH] dts: Add DS1302 driver node
+
+---
+ .../boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts    | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
+index 6ab1cc125b96..cb59be98154d 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxl-s905x-khadas-vim.dts
+@@ -64,6 +64,16 @@ hdmi_connector_in: endpoint {
+ 		};
+ 	};
+ 
++	playos_ds1302@0 {
++		compatible = "playos,ds1302";
++		ce-gpio = <&gpio GPIOH_8 GPIO_ACTIVE_HIGH>;
++		clk-gpio = <&gpio GPIOH_9 GPIO_ACTIVE_HIGH>;
++		data-gpio = <&gpio_ao GPIOAO_6 GPIO_ACTIVE_HIGH>;
++		burst-mode;
++
++		status = "okay";
++	};
++
+ 	sound {
+ 		compatible = "amlogic,gx-sound-card";
+ 		model = "KHADAS-VIM";
+-- 
+2.38.1
+
