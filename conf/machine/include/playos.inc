@@ -1,0 +1,2 @@
+
+KERNEL_MODULE_AUTOLOAD += "configfs"
